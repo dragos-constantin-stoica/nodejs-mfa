@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  unitybill:
+    container_name: test2fa
+    build:
+      context: .
+      tags:
+        - 'datastemalux/n2fa:latest' 
+    image: 'datastemalux/n2fa:latest'
+    container_name: n2fa_1_0_0
+    hostname: n2fa

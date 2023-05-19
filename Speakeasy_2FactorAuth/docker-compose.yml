@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  s2fa:
+    container_name: speakeasy_2fa
+    build:
+      context: .
+      tags:
+        - 'datastemalux/speakeasy_2fa:latest' 
+    image: 'datastemalux/speakeasy_2fa:latest'
+    container_name: speakeasy_2fa__1_0_0
+    hostname: speakeasy_2fa
+    environment:
+      - PORT=8080
+    ports:
+      - 8080:8080

@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  couchdb:
+    image: 'couchdb:3'
+    container_name: couchdb_3.3.1
+    hostname: couchdb
+    ports:
+      - '5984:5984'
+    env_file: .env
+    volumes:
+      - './couchdb/data:/opt/couchdb/data'
+      - './couchdb/etc:/opt/couchdb/etc/local.d'
+

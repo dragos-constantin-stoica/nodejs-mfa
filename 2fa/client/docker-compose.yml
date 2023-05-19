@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  unitybill:
+    container_name: unitybill_cli
+    build:
+      context: .
+      tags:
+        - 'datastemalux/unitybill-cli:latest' 
+    image: 'datastemalux/unitybill-cli:latest'
+    container_name: unitybill_cli_1_0_0
+    hostname: unitybill_cli
+    environment:
+      - PORT=8080
+      - NODE_OPTIONS=--openssl-legacy-provider
+    ports:
+      - 8080:8080

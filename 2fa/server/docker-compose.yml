@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  unitybill:
+    container_name: unitybill_server
+    build:
+      context: .
+      tags:
+        - 'datastemalux/unitybill-srv:latest' 
+    image: 'datastemalux/unitybill-srv:latest'
+    container_name: unitybill_srv_1_0_0
+    hostname: unitybill_srv
+    environment:
+      - HTTP_PORT=8090
+      - NODE_ENV=production
+    ports:
+      - 8090:8090

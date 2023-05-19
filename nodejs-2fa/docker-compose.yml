@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  s2fa:
+    container_name: node_2fa
+    build:
+      context: .
+      tags:
+        - 'datastemalux/node_2fa:latest' 
+    image: 'datastemalux/node_2fa:latest'
+    container_name: node_2fa__1_0_0
+    hostname: node_2fa
+    environment:
+      - PORT=8080
+    ports:
+      - 8080:8080

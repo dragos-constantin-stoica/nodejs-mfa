@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  unitybill:
+    container_name: unitybill
+    build:
+      context: .
+      tags:
+        - 'datastemalux/unitybill-app:latest' 
+    image: 'datastemalux/unitybill-app:latest'
+    container_name: unitybill_1_0_0
+    hostname: unitybill
+    environment:
+      - PORT=8080
+    ports:
+      - 8080:8080
